@@ -35,3 +35,6 @@ C:\Users\Maciej\Desktop\WSEI\DotNetLabs\obj\Debug\netcoreapp3.1\DotNetLabs.dll
 C:\Users\Maciej\Desktop\WSEI\DotNetLabs\obj\Debug\netcoreapp3.1\DotNetLabs.pdb
 C:\Users\Maciej\Desktop\WSEI\DotNetLabs\obj\Debug\netcoreapp3.1\DotNetLabs.genruntimeconfig.cache
 C:\Users\Maciej\Desktop\WSEI\DotNetLabs\obj\Debug\netcoreapp3.1\DotNetLabs.csproj.CopyComplete
+C:\Users\Maciej\Desktop\WSEI\DotNetLabs\obj\Debug\netcoreapp3.1\Razor\Views\Test\Index.cshtml.g.cs
+C:\Users\Maciej\Desktop\WSEI\DotNetLabs\obj\Debug\netcoreapp3.1\Razor\Views\Date\Index.cshtml.g.cs
+C:\Users\Maciej\Desktop\WSEI\DotNetLabs\obj\Debug\netcoreapp3.1\Razor\Views\Json\Index.cshtml.g.cs
