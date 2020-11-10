@@ -18,7 +18,9 @@ namespace MainProject.Controllers
             this.repository = repository;
         }
 
-        public ViewResult List() => View(repository.Products);
+        public ViewResult ListAll() => View(repository.Products);
+
+        public ViewResult List(string category) => View(repository.Products.Where(product => product.Category == category));
     }
 }
 

@@ -46,10 +46,20 @@ namespace MainProject
             app.UseStaticFiles();
             app.UseRouting();
 
-            app.UseEndpoints(routes => routes.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Product}/{action=List}/{id?}")
-            );
+            app.UseEndpoints(routes => {
+                routes.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Product}/{action=List}/{id?}");
+                routes.MapControllerRoute(
+                    name: null,
+                    pattern: "Product/{category}",
+                    defaults: new
+                    {
+                        controller = "Product",
+                        action = "List"
+                    }
+                    );
+            });
             SeedData.EnsurePopulated(app);
         }
     }
