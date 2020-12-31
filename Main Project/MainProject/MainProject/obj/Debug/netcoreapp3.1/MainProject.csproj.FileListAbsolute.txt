@@ -69,8 +69,9 @@ C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\bin
 C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj\Debug\netcoreapp3.1\MainProject.csproj.CoreCompileInputs.cache
-C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj\Debug\netcoreapp3.1\MainProject.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\NavigationMenu\Default.cshtml.g.cs
 C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj\Debug\netcoreapp3.1\MainProject.csproj.CoreCompileInputs.cache
+C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj\Debug\netcoreapp3.1\MainProject.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
