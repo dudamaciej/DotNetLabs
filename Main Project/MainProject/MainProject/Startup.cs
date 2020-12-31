@@ -10,6 +10,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MainProject.Middlewares;
+using Microsoft.AspNetCore.Identity;
 
 
 namespace MainProject
@@ -29,8 +31,11 @@ namespace MainProject
         {
             services.AddRazorPages();
             services.AddTransient<IProductRepository, EFProductRepository>();
-            services.AddDbContext<AppDbContext>(options =>
-            options.UseSqlServer(Configuration["Data:SportStoreProducts:ConnectionString"]));
+           // services.AddDbContext<AppDbContext>(options =>
+           // options.UseSqlServer(Configuration["Data:SportStoreProducts:ConnectionString"]));
+            services.AddIdentity<IdentityUser, IdentityRole>()
+            .AddEntityFrameworkStores<AppDbContext>()
+            .AddDefaultTokenProviders();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,15 +45,20 @@ namespace MainProject
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseMiddleware<TimeMiddleware>();
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseRouting();
 
             app.UseEndpoints(routes => {
+
                 routes.MapControllerRoute(
-                    name: "Product",
+                        name: "default",
+                        pattern: "{controller=Product}/{action=List}/{id?}");
+
+                routes.MapControllerRoute(
+                         name: "Product",
                         pattern: "Product/{category}",
                         defaults: new
                         {
@@ -56,11 +66,13 @@ namespace MainProject
                             action = "List"
                         });
                 routes.MapControllerRoute(
-                     name: "Admin",
+                     name: "defaultAdmin",
                     pattern: "{controller=Admin}/{action=Index}");
+
                 routes.MapControllerRoute(
                      name: "AdminEdit",
                     pattern: "{controller=Admin}/{action=Edit}/{id?}");
+
                 routes.MapControllerRoute(
                      name: "AdminDelete",
                     pattern: "{controller=Admin}/{action=Delete}/{id?}");

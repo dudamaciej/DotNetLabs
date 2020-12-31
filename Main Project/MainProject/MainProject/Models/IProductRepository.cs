@@ -9,5 +9,5 @@ namespace MainProject.Models
     {
         IQueryable<Product> Products { get; }
     }
-   
+
 }
