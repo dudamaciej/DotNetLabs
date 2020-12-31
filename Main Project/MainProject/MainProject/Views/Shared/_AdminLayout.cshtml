@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Admin Dashboard</title>
+        <link asp-href-include="~/lib/twitter-bootstrap/css/*.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        @{
+            var successMessage = TempData["Success"];
+            if (successMessage != null)
+            {
+                <div class="alert-success container-fluid">@Html.Raw(successMessage)</div>
+            }
+        }
+        <div>
+            @RenderBody()
+        </div>
+    </body>
+    </html> 

@@ -48,18 +48,22 @@ namespace MainProject
 
             app.UseEndpoints(routes => {
                 routes.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Product}/{action=List}/{id?}");
+                    name: "Product",
+                        pattern: "Product/{category}",
+                        defaults: new
+                        {
+                            controller = "Product",
+                            action = "List"
+                        });
                 routes.MapControllerRoute(
-                    name: null,
-                    pattern: "Product/{category}",
-                    defaults: new
-                    {
-                        controller = "Product",
-                        action = "List"
-                    }
-                    );
-
+                     name: "Admin",
+                    pattern: "{controller=Admin}/{action=Index}");
+                routes.MapControllerRoute(
+                     name: "AdminEdit",
+                    pattern: "{controller=Admin}/{action=Edit}/{id?}");
+                routes.MapControllerRoute(
+                     name: "AdminDelete",
+                    pattern: "{controller=Admin}/{action=Delete}/{id?}");
             });
             SeedData.EnsurePopulated(app);
         }
