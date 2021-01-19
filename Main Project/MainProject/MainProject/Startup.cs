@@ -34,7 +34,7 @@ namespace MainProject
            // services.AddDbContext<AppDbContext>(options =>
            // options.UseSqlServer(Configuration["Data:SportStoreProducts:ConnectionString"]));
             services.AddIdentity<IdentityUser, IdentityRole>()
-            .AddEntityFrameworkStores<AppDbContext>()
+            
             .AddDefaultTokenProviders();
         }
 
@@ -51,7 +51,8 @@ namespace MainProject
             app.UseStaticFiles();
             app.UseRouting();
 
-            app.UseEndpoints(routes => {
+            app.UseEndpoints(routes =>
+            {
 
                 routes.MapControllerRoute(
                         name: "default",
@@ -66,18 +67,15 @@ namespace MainProject
                             action = "List"
                         });
                 routes.MapControllerRoute(
-                     name: "defaultAdmin",
-                    pattern: "{controller=Admin}/{action=Index}");
-
-                routes.MapControllerRoute(
-                     name: "AdminEdit",
-                    pattern: "{controller=Admin}/{action=Edit}/{id?}");
-
-                routes.MapControllerRoute(
-                     name: "AdminDelete",
-                    pattern: "{controller=Admin}/{action=Delete}/{id?}");
+                     name: null,
+                     pattern: "Admin/{action=Index}",
+                     defaults: new
+                     {
+                         controller = "Admin",
+                         action = "Index",
+                     });
             });
-            SeedData.EnsurePopulated(app);
-        }
+                SeedData.EnsurePopulated(app);
+            }
     }
 }

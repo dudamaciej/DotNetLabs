@@ -7,20 +7,20 @@ namespace MainProject.Models
 {
     public class EFProductRepository : IProductRepository
     {
-        private readonly AppDbContext ctx;
+        private readonly AppDbContext _ctx;
         public EFProductRepository(AppDbContext ctx)
         {
-            this.ctx = ctx;
+            this._ctx = ctx;
         }
-        public IQueryable<Product> Products => ctx.Products;
+        public IQueryable<Product> Products =>_ctx.Products;
 
         public Product DeleteProduct(int ProductId)
         {
-            Product dbEntry = ctx.Products.FirstOrDefault(p => p.ProductId == ProductId);
+            Product dbEntry = _ctx.Products.FirstOrDefault(p => p.ProductId == ProductId);
             if(dbEntry != null)
             {
-                ctx.Products.Remove(dbEntry);
-                ctx.SaveChanges();
+                _ctx.Products.Remove(dbEntry);
+                _ctx.SaveChanges();
             }
             return dbEntry;
         }
@@ -29,11 +29,11 @@ namespace MainProject.Models
         {
             if(product.ProductId == 0)
             {
-                ctx.Products.Add(product);
+                _ctx.Products.Add(product);
             }
             else
             {
-                Product dbEntry = ctx.Products.FirstOrDefault(p => p.ProductId == product.ProductId);
+                Product dbEntry = _ctx.Products.FirstOrDefault(p => p.ProductId == product.ProductId);
 
                 if(dbEntry != null)
                 {
@@ -43,7 +43,7 @@ namespace MainProject.Models
                     dbEntry.Category = product.Category;
                 }
             }
-            ctx.SaveChanges();
+            _ctx.SaveChanges();
         }
     }
 }
