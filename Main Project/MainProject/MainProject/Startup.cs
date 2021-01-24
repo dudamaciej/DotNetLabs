@@ -18,8 +18,7 @@ namespace MainProject
 {
     public class Startup
     {
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+      
 
         public Startup(IConfiguration configuration)
         {
@@ -31,11 +30,12 @@ namespace MainProject
         {
             services.AddRazorPages();
             services.AddTransient<IProductRepository, EFProductRepository>();
-           // services.AddDbContext<AppDbContext>(options =>
-           // options.UseSqlServer(Configuration["Data:SportStoreProducts:ConnectionString"]));
-            services.AddIdentity<IdentityUser, IdentityRole>()
+            services.AddDbContext<AppDbContext>(options =>
+            options.UseSqlServer(Configuration["Data:SportStoreProducts:ConnectionString"]));
+            services.AddIdentity<IdentityUser, IdentityRole>().AddDefaultTokenProviders()
+                                           .AddEntityFrameworkStores<AppDbContext>();
             
-            .AddDefaultTokenProviders();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -67,7 +67,7 @@ namespace MainProject
                             action = "List"
                         });
                 routes.MapControllerRoute(
-                     name: null,
+                     name: "Admin",
                      pattern: "Admin/{action=Index}",
                      defaults: new
                      {

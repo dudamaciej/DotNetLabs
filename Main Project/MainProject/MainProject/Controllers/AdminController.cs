@@ -9,9 +9,9 @@ namespace MainProject.Controllers
 {
     public class AdminController : Controller
     {
-        private EFProductRepository repository;
+        private readonly IProductRepository repository;
 
-        public AdminController(EFProductRepository repo)
+        public AdminController(IProductRepository repo)
         {
             repository = repo;
         }

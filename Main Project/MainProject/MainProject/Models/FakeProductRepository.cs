@@ -13,5 +13,16 @@ namespace MainProject.Models
             new Product { ProductId = 2, ProductName = "Air Joran 11 Light Smoke", Description = "size 41 color: black/white", Price = 1099, Category = "Sneakers"},
             new Product { ProductId = 3, ProductName = "Air Joran 1 Low Laser Orange", Description = "size 40 color: orange/white", Price = 999, Category = "Sneakers"},
         }.AsQueryable<Product>();
+       
+
+        void IProductRepository.SaveProduct(Product product)
+        {
+            throw new NotImplementedException();
+        }
+
+        Product IProductRepository.DeleteProduct(int productId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
