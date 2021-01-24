@@ -90,3 +90,4 @@ C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\bin
 C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj\Debug\netcoreapp3.1\MainProject.csproj.CoreCompileInputs.cache
 C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj\Debug\netcoreapp3.1\MainProject.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs

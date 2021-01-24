@@ -7,6 +7,9 @@
         <link asp-href-include="~/lib/twitter-bootstrap/css/*.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
+        <div class="col-2">
+            <a class="btn btn-sm btn-primary" asp-action="Logout" asp-controller="Account">Logout</a>
+        </div>
         @{
             var successMessage = TempData["Success"];
             if (successMessage != null)
