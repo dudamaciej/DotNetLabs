@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MainProject.Middlewares;
 using Microsoft.AspNetCore.Identity;
+using SignalRChat.Hubs;
 
 
 namespace MainProject
@@ -29,6 +30,7 @@ namespace MainProject
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddSignalR();
             services.AddTransient<IProductRepository, EFProductRepository>();
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(Configuration["Data:SportStoreProducts:ConnectionString"]));
@@ -62,6 +64,8 @@ namespace MainProject
             
             app.UseEndpoints(routes =>
             {
+                routes.MapHub<ChatHub>("/chathub");
+                
 
                 routes.MapControllerRoute(
                         name: "default",
