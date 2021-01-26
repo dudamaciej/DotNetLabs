@@ -33,9 +33,10 @@ namespace MainProject
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(Configuration["Data:SportStoreProducts:ConnectionString"]));
             services.AddIdentity<IdentityUser, IdentityRole>().AddDefaultTokenProviders()
-                                           .AddEntityFrameworkStores<AppDbContext>();
-            
-            
+                                          .AddEntityFrameworkStores<AppDbContext>();
+            services.AddControllers();
+            services.AddSwaggerGen();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +46,12 @@ namespace MainProject
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Shop V1");
+                c.RoutePrefix = "API";
+            });
             app.UseMiddleware<TimeMiddleware>();
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
@@ -52,7 +59,7 @@ namespace MainProject
             app.UseAuthentication();
             app.UseRouting();
             app.UseAuthorization();
-
+            
             app.UseEndpoints(routes =>
             {
 

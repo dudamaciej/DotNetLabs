@@ -21,6 +21,8 @@ namespace MainProject.Controllers
         public ViewResult ListAll() => View(repository.Products);
 
         public ViewResult List(string category) => View(repository.Products.Where(product => product.Category == category));
+
+        public ViewResult ProductById(int productId) => View(repository.Products.Single(p =>p.ProductId == productId));
     }
 }
 
