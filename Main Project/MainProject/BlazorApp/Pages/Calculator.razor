@@ -1,0 +1,39 @@
+﻿@page "/calculator"
+
+<h1>Calculator</h1>
+
+<div>
+    <input type="number" @bind="number1">
+    <input type="number" @bind="number2">
+</div>
+<div>
+    <button class="btn btn-primary" @onclick="@(() => AddNumbers(number1, number2))">+</button>
+    <button class="btn btn-primary" @onclick="@(() => SubtractNumbers(number1, number2))">-</button>
+    <button class="btn btn-primary" @onclick="@(() => MultiNumbers(number1, number2))">*</button>
+   
+</div>
+<h3>Result: @result</h3>
+
+
+
+
+@code { private int result, number1, number2;
+
+    private void AddNumbers(int number1, int number2)
+    {
+        result = number1 + number2;
+
+    }
+    private void SubtractNumbers(int number1, int number2)
+    {
+        result = number1 - number2;
+
+    }
+    private void MultiNumbers(int number1, int number2)
+    {
+        result = number1 * number2;
+
+    }
+  
+
+}
