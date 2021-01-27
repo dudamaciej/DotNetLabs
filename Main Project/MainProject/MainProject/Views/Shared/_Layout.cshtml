@@ -6,6 +6,25 @@
           asp-href-include="~/lib/twitter-bootstrap/css/*.min.css"
           asp-href-exclude="**/*-reboot*,**/*-grid*" />
     <title>SportsStore</title>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Chat">CHAT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="List">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Admin</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <p id="userOnlineBox"></p>
+        </div>
+        
+    </nav>
 </head>
 <body>
     <div class="navbar navbar-inverse bg-inverse"
@@ -20,6 +39,8 @@
             @RenderBody()
         </div>
     </div>
-   
+
 </body>
 </html>
+<script src="~/lib/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/lib/js/counter.js"></script>

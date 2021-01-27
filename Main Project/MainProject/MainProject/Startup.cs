@@ -13,7 +13,7 @@ using Microsoft.Extensions.Hosting;
 using MainProject.Middlewares;
 using Microsoft.AspNetCore.Identity;
 using SignalRChat.Hubs;
-
+using MainProject.Hubs;
 
 namespace MainProject
 {
@@ -65,7 +65,8 @@ namespace MainProject
             app.UseEndpoints(routes =>
             {
                 routes.MapHub<ChatHub>("/chathub");
-                
+                routes.MapHub<CounterHub>("/counterhub");
+
 
                 routes.MapControllerRoute(
                         name: "default",
