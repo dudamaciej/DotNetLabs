@@ -30,7 +30,7 @@ namespace MainProject
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddSignalR();
+            
             services.AddTransient<IProductRepository, EFProductRepository>();
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(Configuration["Data:SportStoreProducts:ConnectionString"]));
@@ -38,7 +38,7 @@ namespace MainProject
                                           .AddEntityFrameworkStores<AppDbContext>();
             services.AddControllers();
             services.AddSwaggerGen();
-
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -79,6 +79,9 @@ namespace MainProject
                             controller = "Product",
                             action = "List"
                         });
+                routes.MapControllerRoute(
+                     name: "chat",
+                     pattern: "{controller=Home}/{action=Chat}/{id?}");
                 routes.MapControllerRoute(
                      name: "Admin",
                      pattern: "Admin/{action=Index}",

@@ -78,7 +78,6 @@ C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj
 C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj\Debug\netcoreapp3.1\MainProject.TagHelpers.input.cache
 C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj\Debug\netcoreapp3.1\MainProject.TagHelpers.output.cache
 C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj\Debug\netcoreapp3.1\MainProject.RazorCoreGenerate.cache
-C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
 C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
 C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Edit.cshtml.g.cs
 C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
@@ -97,3 +96,4 @@ C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj
 C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj\Debug\netcoreapp3.1\MainProject.dll
 C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj\Debug\netcoreapp3.1\MainProject.pdb
 C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj\Debug\netcoreapp3.1\MainProject.genruntimeconfig.cache
+C:\Users\Maciej\Desktop\WSEI\DotNetLabs\Main Project\MainProject\MainProject\obj\Debug\netcoreapp3.1\Razor\Views\Home\Chat.cshtml.g.cs
